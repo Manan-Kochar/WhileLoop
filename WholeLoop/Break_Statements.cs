@@ -1,29 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-// finding prime numbers from 1 to 100 using break statement
+// finding prime numbers using break statement
 namespace WhileLoop
 {
     internal class Break_Statements
-    { 
+    {
         static void Main(string[] args)
         {
-            Console.WriteLine("Prime numbers between 1 and 100 are:");
-            for (int i = 2; i <= 100; i++)
+            int number;
+            Console.Write("Enter a number: ");
+                number = Convert.ToInt32(Console.ReadLine());
+            bool isPrime = true;
+            if (number <= 1)
             {
-                bool isPrime = true;
-                for (int j = 2; j <= Math.Sqrt(i); j++)
+                isPrime = false;
+            }
+            else
+            {
+                for (int i = 2; i <= Math.Sqrt(number); i++)
                 {
-                    if (i % j == 0)
+                    if (number % i == 0)
                     {
                         isPrime = false;
-                        break; 
+                        break;  
                     }
                 }
-                if (isPrime)
-                {
-                    Console.Write(i + " ");
-                }
+            }
+            if (isPrime)
+            {
+                Console.WriteLine($"{number} is a prime number.");
+            }
+            else
+            {
+                Console.WriteLine($"{number} is not a prime number.");
             }
         }
     }
