@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WholeLoop
+namespace WhileLoop
 {
     internal class NumberGuessingGame
     {
