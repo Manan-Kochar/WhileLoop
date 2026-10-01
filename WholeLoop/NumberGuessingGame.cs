@@ -10,7 +10,7 @@ namespace WholeLoop
         {
             Random random = new Random();
             int numberToGuess = random.Next(1, 101);
-            int Guess = 67;
+            int Guess = 0;
             int attempts = 0;
             Console.WriteLine("Welcome to the Number Guessing Game!");
             while (Guess != numberToGuess)
